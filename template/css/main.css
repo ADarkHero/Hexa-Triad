@@ -1,0 +1,99 @@
+#centering{
+    width: 1000px;
+    margin: auto;
+}
+
+#blue{
+    width: 150px;
+    position: absolute;
+}
+
+#field{
+    width: 600px;
+    margin-left: 175px;
+    margin-top: 10px;
+    position: absolute;
+}
+
+#red{
+    width: 150px;
+    margin-left: 850px;
+    position: absolute;
+}
+
+#red h2{
+    padding-bottom: 100px;
+    color: #770000;
+}
+
+#blue h2{
+    padding-bottom: 100px;
+    color: #000077;
+}
+
+#field h2, form{
+    display: inline;
+}
+
+#field form{
+    margin-left: 75px;
+    margin-right: 75px
+}
+
+#chosencard{
+    position: absolute;
+    margin-top: 55px;
+}
+
+#chosencard img{
+    border: 3px solid #000077;
+    width: 94px;
+}
+
+#chosencardred{
+    position: absolute;
+    margin-top: 55px;
+}
+
+#chosencardred img{
+    border: 3px solid #770000;
+    margin-left: 499px;
+    width: 94px;
+}
+
+img.grey{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+
+
+
+/**********************************************************************************************************************
+* Cardhover
+**********************************************************************************************************************/
+.card {
+    position: relative;
+    padding: 0;
+    width:100px;
+    display:block;
+}
+.cardtext {
+    padding-top: 5px;
+    position: absolute;
+    color:#f00;
+    background-color:rgba(255,255,255,0.8);
+    width: 100px;
+    min-height: 150px;
+    text-align: center;
+    font-size: 8pt;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.cardtext:hover {
+    opacity:1;
+}
