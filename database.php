@@ -1065,11 +1065,13 @@ function updatePoints($id, $user, $pointbonus){
 
     if($playerpoint == "red"){
         $playerpoint = "PointsR";
-        $playerpoint2 = "PlayerBlue";
+        $playerpoint2 = "PointsB";
+        $opponent = "PlayerBlue";
     }
     else{
         $playerpoint = "PointsB";
-        $playerpoint2 = "PlayerRed";
+        $playerpoint2 = "PointsR";
+        $opponent = "PlayerRed";
     }
 
 
@@ -1118,7 +1120,7 @@ function updatePoints($id, $user, $pointbonus){
 
 
 
-        $sql = "SELECT ".$playerpoint2." FROM field WHERE FieldID = '$id'";
+        $sql = "SELECT ".$opponent." FROM field WHERE FieldID = '$id'";
         $result  =  mysql_query($sql);
 
         if ($result) {
@@ -1131,14 +1133,15 @@ function updatePoints($id, $user, $pointbonus){
             }
         }
 
-        $playercolor = getPlayerColor($id, $user);
         if($points == $points2){
             drawgame($id, $user, $player);
         }
         elseif($points > $points2){
+            $playercolor = getPlayerColor($id, $user);
             wingame($id, $user, $player, $playercolor);
         }
         else{
+            $playercolor = getPlayerColor($id, $player);
             wingame($id, $player, $user,  $playercolor);
         }
 
@@ -1190,7 +1193,7 @@ function wingame($id, $user, $user2, $playercolor){
     $gold = $userdata[5]+= 5;
     $diamond = $userdata[6]+=1;
 
-    $sql = "UPDATE user SET UserGold='$gold', UserDiamond='$diamond', UserWins='$wins' WHERE UserID = '$user2'";
+    $sql = "UPDATE user SET UserGold='$gold', UserDiamond='$diamond' WHERE UserID = '$user2'";
     mysql_query($sql);
 }
 
