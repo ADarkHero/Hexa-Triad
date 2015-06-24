@@ -1,5 +1,5 @@
 # HexaTriad
 Asynchronous web-based Trading Card Game, based on Final Fantasys Triple Triad.
-![BannerGames Screenshot](http://imgur.com/ocnfkGP)
+![HexaTriad Screenshot](http://i.imgur.com/ocnfkGP.png)
 
 Currently in Pre-Alpha. The basic engine works, but much more features are planned.
